@@ -1,0 +1,57 @@
+$def with(res)
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="US-ASCII">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>AKINSOFT | Software Engineering</title>
+		<meta name="description" content="Sticky Table Headers Revisited: Creating functional and flexible sticky table headers" />
+		<meta name="keywords" content="Sticky Table Headers Revisited" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/component.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+
+			<header>
+				<h2>AKINSOFT<span>Software Engineering</span></h2>
+
+			</header>
+			<div class="component">
+				<h2>Akdeniz Bölgesindeki Restorantlar</h2>
+				<p>Bütün Veriler www.tripadvisor.com.tr adresinden scrapping yöntemi kullanılarak çekilmiştir. </p>
+				<table>
+					<thead>
+						<tr>
+							<th>İsim</th>
+							<th>Şehir</th>
+							<th>İlçe</th>
+							<th>Adres</th>
+							<th>Telefon No </th>
+						</tr>
+					</thead>
+					<tbody>
+						$for r in res:
+							<tr><td class="user-name">$r["isim"]</td><td class="user-email">$r["sehir"]</td><td class="user-phone">$r["ilce"].</td><td class="user-mobile">$r["adres"]</td><td class="user-mobile">$r["tel"]</td></tr>
+					</tbody>
+				</table>
+
+			<section class="related">
+				<p>Hamdi Burak Dilek</p>
+
+			</section>
+		</div><!-- /container -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+		<script src="/static/js/jquery.stickyheader.js"></script>
+	</body>
+</html>
